@@ -1,0 +1,41 @@
+<html lang = "en">
+   <head></head>
+   <body>
+      <h3>
+         <a>MEDICINES BILL</a>
+      </h3>
+      
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+		
+      <h3>MEDICINES BILL</h3>
+      <form action="/data">
+      <table>
+         <thead>
+            <tr>
+               <th>Bill ID</th>
+               <th>NAME</th>
+               <th>QUANTITY</th>
+               <th>PRICE</th>
+               <th>MODE</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for BILL in bill  %}
+               <tr>
+                  <td>{{ BILL.id }}</td>
+                  <td>{{ BILL.bill_name }}</td>
+                  <td>{{ BILL.bill_quantity }}</td>
+                  <td>{{ BILL.bill_total }}</td>
+                  <td>{{ BILL.bill_mode }}</td>
+                  
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </form>
+   </body>
+</html>

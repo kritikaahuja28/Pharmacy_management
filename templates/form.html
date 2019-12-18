@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FORM</title>
+  </head>
+  <body background="#9B9797">
+
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<div>
+  <form action="/hello" method="post">
+  <b>MEDICINE DATA</b>
+  MEDICINE NAME:<input type="text" name="D1" value="0" placeholder="MEDICINE NAME"><br><br>
+  QUANTITY: <input type="NUMBER" name="D1" value="0" placeholder="QUANTITY"><br>
+  SHELF NUMBER: <input type="NUMBER" name="D2"  value="0"  placeholder="SHELF NUMBER"><br>
+  PRICE: <input type="NUMBER" name="D4"  value="0"  placeholder="PRICE"><br>
+  EXPIRY DATE: <input type="DATE" name="D5"  value="0"  placeholder="EXPIRY DATE"><br>
+      
+           <form action="/hello">
+  <button type="submit">MAKE CHANGES</button>
+  </form>
+  <br>
+     <form action="/data" align='right'>
+  <button type="submit">SHOW CHANGES</button>
+  </form>
+</div>
+</body>
+</html>

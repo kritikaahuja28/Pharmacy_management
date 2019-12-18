@@ -1,0 +1,40 @@
+<html lang = "en">
+   <head></head>
+   <body>
+      <h3>
+         <a>MEDICINES DATA</a>
+      </h3>
+      
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+		
+      <h3>MEDICINES</h3>
+      <form action="/data">
+      <table>
+         <thead>
+            <tr>
+               <th>Medicine Name</th>
+               <th>QUANTITY</th>
+               <th>PRICE</th>
+               <th>SHELF</th>
+               <th>EXPIRY</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for MEDICINES in medicine  %}
+               <tr>
+                  <td>{{ MEDICINES.name }}</td>
+                  <td>{{ MEDICINES.quantity }}</td>
+                  <td>{{ MEDICINES.price }}</td>
+                  <td>{{ MEDICINES.shelf }}</td>
+                  <td>{{ MEDICINES.expiry }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </form>
+   </body>
+</html>

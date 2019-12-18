@@ -1,0 +1,38 @@
+<html>
+   <body>
+      <h3>Medicine</h3>
+      <hr/>
+      
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+      
+      <form action = "/form" method = "POST">
+         <label for = "name">Medine Name</label><br>
+         <input type = "text" name = "name" placeholder = "Name" /><br>
+
+         <label for = "quantity">QUANTITY</label><br>
+         <input type = "text" name = "quantity" placeholder = "quantity" /><br>
+
+         <label for = "price">PRICE</label><br>
+         <input type = "text" name = "price" placeholder = "price" /><br>
+
+         <label for = "shelf">SHELF</label><br>
+         <input name = "shelf" placeholder = "shelf"></input><br>
+
+           <label for = "expiry">expiry</label><br>
+         <input type = "text" name = "expiry" placeholder = "expiry"></input><br>
+          
+    <form action="/data">
+    <button type="submit">Press Button!</button>
+    </form>
+    {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+    {% endif %}
+
+  
+      </form>
+   </body>
+</html>
